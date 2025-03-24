@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">🏠 Home</a></li>
+            <li><a href="products.html">🛍 Products</a></li>
+            <li><a href="cart.html" class="active">🛒 Cart</a></li>
+            <li><a href="checkout.html">💳 Checkout</a></li>
+        </ul>
+    </nav>
+
+    <div class="cart-container">
+        <h1>Your Shopping Cart 🛒</h1>
+
+        <!-- Cart Items -->
+        <div class="cart-items">
+            <div class="cart-item">
+                <img src="Images/leather biker jacket.webp" alt="Leather Jacket">
+                <div class="cart-info">
+                    <h2>Leather Biker Jacket</h2>
+                    <p class="price">$120.00</p>
+                    <p class="size">Size: <span>M</span></p>
+                    <div class="quantity-control">
+                        <button class="minus">−</button>
+                        <span class="quantity">1</span>
+                        <button class="plus">+</button>
+                    </div>
+                </div>
+                <button class="remove">Remove ❌</button>
+            </div>
+
+            <div class="cart-item">
+                <img src="Images/riding glows.jpg" alt="Riding Gloves">
+                <div class="cart-info">
+                    <h2>Riding Gloves</h2>
+                    <p class="price">$45.00</p>
+                    <p class="size">Size: <span>L</span></p>
+                    <div class="quantity-control">
+                        <button class="minus">−</button>
+                        <span class="quantity">1</span>
+                        <button class="plus">+</button>
+                    </div>
+                </div>
+                <button class="remove">Remove ❌</button>
+            </div>
+
+            <div class="cart-item">
+                <img src="Images/biker boots.jpg" alt="Biker Boots">
+                <div class="cart-info">
+                    <h2>Biker Boots</h2>
+                    <p class="price">$80.00</p>
+                    <p class="size">Size: <span>42</span></p>
+                    <div class="quantity-control">
+                        <button class="minus">−</button>
+                        <span class="quantity">1</span>
+                        <button class="plus">+</button>
+                    </div>
+                </div>
+                <button class="remove">Remove ❌</button>
+            </div>
+
+            <div class="cart-item">
+                <img src="Images/graphic t shirt.avif" alt="T-shirt">
+                <div class="cart-info">
+                    <h2>Graphic T-shirt</h2>
+                    <p class="price">$30.00</p>
+                    <p class="size">Size: <span>XL</span></p>
+                    <div class="quantity-control">
+                        <button class="minus">−</button>
+                        <span class="quantity">1</span>
+                        <button class="plus">+</button>
+                    </div>
+                </div>
+                <button class="remove">Remove ❌</button>
+            </div>
+        </div>
+
+        <!-- Order Summary -->
+        <div class="order-summary">
+            <h2>Order Summary 🧾</h2>
+            <p>Subtotal: <span id="subtotal">$275.00</span></p>
+            <p>Shipping: <span id="shipping">$10.00</span></p>
+            <p>Tax (5%): <span id="tax">$13.75</span></p>
+            <hr>
+            <p class="total">Total: <span id="total">$298.75</span></p>
+            <button class="checkout-btn" onclick="window.location.href='checkout.html'">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Slide-in Cart Button -->
+    <button class="slide-cart-btn">🛒 View Cart</button>
+
+    <script src="cart.js"></script>
+</body>
+</html>

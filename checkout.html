@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Your Shopping Cart</title>
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">Home</a>
+        <a href="products.html">Shop></a>
+        <a href="cart.html">Cart</a>
+        <a href="checkout.html" class="active">Checkout</a>
+    </nav>
+
+    <!-- Checkout Form -->
+    <div class="checkout-container">
+        <div class="checkout-header">
+            <h1>Checkout</h1>
+            <p>Fill in your details and proceed with your payment</p>
+        </div>
+
+        <div class="checkout-content">
+            <!-- Billing Information -->
+            <div class="billing-info">
+                <h2>Billing Information</h2>
+                <form id="checkout-form">
+                    <input type="text" id="first-name" placeholder="First Name" required>
+                    <input type="text" id="last-name" placeholder="Last Name" required>
+                    <input type="text" id="address" placeholder="Shipping Address" required>
+                    <input type="text" id="postal-code" placeholder="Postal Code" required>
+
+                    <!-- Payment Method -->
+                    <div class="payment-method">
+                        <label>Payment Method</label>
+                        <select id="payment-method">
+                            <option value="credit-card">Credit Card</option>
+                            <option value="cash-on-delivery">Cash on Delivery</option>
+                        </select>
+                    </div>
+
+                    <!-- Order Summary -->
+                    <div class="order-summary">
+                        <h3>Order Summary</h3>
+                        <div id="order-summary-details">
+                            <p>Subtotal: <span id="subtotal">$275.00</span></p>
+            <p>Shipping: <span id="shipping">$10.00</span></p>
+            <p>Tax (5%): <span id="tax">$13.75</span></p>
+            <hr>
+            <p class="total">Total: <span id="total">$298.75</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Terms and Conditions -->
+                    <div class="terms">
+                        <label>
+                            <input type="checkbox" id="agree-terms"> I agree to the <a href="#">Terms and Conditions</a>
+                        </label>
+                    </div>
+
+                    <!-- Place Order Button -->
+                    <button type="button" id="place-order-btn" class="place-order-btn" onclick="placeOrder()">Place Order</button>
+                </form>
+            </div>
+
+            <!-- Order Details Section -->
+            <div class="order-details">
+                <h2>Your Order</h2>
+                <div id="order-details-list">
+                    <!-- Dynamically updated order items will go here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="checkout.js"></script>
+</body>
+</html>

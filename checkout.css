@@ -1,0 +1,182 @@
+/* Global Styles (For consistency) */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fafafa; /* Lighter background for contrast */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #222; /* Dark background for the navbar */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    transition: background 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #ff9900; /* Highlight color for navigation */
+}
+
+.navbar .active {
+    background-color: #ff6600; /* Active page color */
+}
+
+/* Checkout Container */
+.checkout-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.checkout-header h1 {
+    font-size: 2.5rem;
+    color: #ff6600; /* Consistent brand color */
+    margin-bottom: 10px;
+}
+
+.checkout-header p {
+    font-size: 1.1rem;
+    color: #777;
+}
+
+/* Checkout Form Content */
+.checkout-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap; /* For responsiveness */
+}
+
+.billing-info {
+    flex: 2;
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.billing-info h2 {
+    font-size: 1.8rem;
+    color: #ff6600; /* Highlight color for headings */
+    margin-bottom: 20px;
+}
+
+.billing-info input, .billing-info select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: border 0.3s ease;
+}
+
+.billing-info input:focus, .billing-info select:focus {
+    border-color: #ff6600; /* Focused input with brand color */
+}
+
+.payment-method, .terms {
+    margin-bottom: 20px;
+}
+
+.order-summary {
+    background: #f4f4f4;
+    padding: 25px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.order-summary h3 {
+    color: #ff6600;
+    font-size: 1.5rem;
+}
+
+.order-summary p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.place-order-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #ff6600; /* Button with brand color */
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 30px;
+}
+
+.place-order-btn:hover {
+    background-color: #ff5500; /* Darker shade on hover */
+}
+
+/* Order Details Section */
+.order-details {
+    flex: 1;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.order-details h2 {
+    color: #ff6600;
+    font-size: 1.8rem;
+}
+
+.order-details div {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Terms and Conditions */
+.terms a {
+    color: #ff6600; /* Link color consistent with theme */
+    text-decoration: none;
+}
+
+.terms label {
+    font-size: 1rem;
+    color: #666;
+}
+
+.terms input {
+    margin-right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .checkout-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .billing-info, .order-details {
+        width: 100%;
+    }
+}

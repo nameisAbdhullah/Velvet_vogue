@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Velvet Vogue</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="account.html">Account</a>
+        <a href="contact.html" class="active">Contact</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Contact Us</h1>
+
+        <!-- Contact Information -->
+        <section class="contact-info">
+            <h2>Our Contact Information</h2>
+            <p>If you have any inquiries, feel free to reach out to us via the following methods:</p>
+            <ul>
+                <li><strong>WhatsApp:</strong> <a href="https://wa.me/94741722005" target="_blank">+94 7417 22005</a></li>
+                <li><strong>Email:</strong> <a href="mailto:velvetvogue@business.com">velvetvogue@business.com</a></li>
+            </ul>
+        </section>
+
+        <!-- Enquiry Box -->
+        <section class="enquiry-form">
+            <h2>Send Us An Enquiry</h2>
+            <form action="submit_enquiry.php" method="POST">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+                
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Your email address" required>
+                
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </section>
+
+        <!-- Frequently Asked Questions (FAQ) -->
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3>What payment methods do you accept?</h3>
+                <p>We accept credit/debit cards and cash on delivery.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How long does delivery take?</h3>
+                <p>Delivery typically takes between 3-5 business days depending on your location.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Can I track my order?</h3>
+                <p>Yes, once your order is shipped, we will send you a tracking number to monitor your shipment.</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Velvet Vogue. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

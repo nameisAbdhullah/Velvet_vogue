@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details | LuxeWear</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">Velvet Vogue</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Shop</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+                <li><a href="accounts.html">Account</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Product Details Section -->
+    <section class="product-details">
+        <div class="product-container">
+            
+            <!-- Image Gallery -->
+            <div class="image-gallery">
+                <div class="main-image">
+                    <img id="main-img" src="Images/classic blue shirt.webp" alt="Product Image">
+                </div>
+                <div class="thumbnail-images">
+                    <img src="Images/classic blue shirt.webp" alt="Shirt 1" onclick="changeImage ('images/classic blue Shirt.webp')">
+                     <img src="Images/casual t shirt 2.webp" alt="Shirt 2" onclick="changeImage ('images/Casual t shirt 2.webp')">
+                    <img src="Images/casual blue shirt 3.webp" alt="Shirt 3" onclick="changeImage('images/casual blue shirt 3.webp')">              </div>
+            </div>
+
+            <!-- Product Information -->
+            <div class="product-info">
+                <h1 id="product-name">Classic Blue Shirt</h1>
+                <p class="price" id="product-price">$55</p>
+                <p class="stock-status"><span id="stock">In Stock</span></p>
+
+                <label for="color">Color:</label>
+                <select id="color">
+                    <option>Blue</option>
+                    <option>Black</option>
+                    <option>White</option>
+                </select>
+
+                <label for="size">Size:</label>
+                <select id="size">
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                </select>
+
+                <p class="description" id="product-desc">
+                    A stylish and premium-quality shirt, perfect for formal and casual wear. 
+                    Made from **100% cotton** with a comfortable fit.
+                </p>
+                
+                <ul class="fabric-details">
+                    <li>Material: 100% Cotton</li>
+                    <li>Breathable Fabric</li>
+                    <li>Easy Wash & Quick Dry</li>
+                </ul>
+
+                <div class="buttons">
+                    <button class="buy-now" onclick="buyNow()">Buy Now</button>
+                    <button class="add-to-cart" onclick="addToCart('Classic Blue Shirt', 55)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Similar Products Section -->
+    <section class="similar-products">
+        <h2>Similar Products</h2>
+        <div class="product-slider">
+            <div class="product-card" onclick="loadProduct('Shirt', 'Images/classic blue shirt.webp')">
+                <img src="Images/classic blue shirt.webp" alt="Shirt">
+                <p>Classic Blue Shirt</p>
+            </div>
+            <div class="product-card" onclick="loadProduct('casual shirt', 'Images/casual white shirt.avif', '$40', 'Soft and comfortable daily wear cotton T-shirt.')">
+                <img src="Images/casual white shirt.avif" alt="T-Shirt">
+                <p>Casual White T-Shirt</p>
+            </div>
+            <div class="product-card" onclick="loadProduct('Jacket', 'images/luxury jacket.webp', '$80', 'Premium warm and stylish jacket for winter.')">
+                <img src="Images/luxury jacket.webp"Jacket">
+                <p>Stylish Black Jacket</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews">
+        <h2>Customer Reviews</h2>
+        <div class="review">
+            <p><strong>Emily Rose</strong>: "Amazing quality and fits perfectly! Worth the price."</p>
+        </div>
+        <div class="review">
+            <p><strong>Michael Scott</strong>: "Best shirt I've ever bought. Super comfortable!"</p>
+        </div>
+        <textarea placeholder="Write a review..."></textarea>
+        <button class="submit-review">Submit Review</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Velvet Vogue. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+    <!-- Admin Login Page (Visible Initially) -->
+    <div id="admin-login" class="login-container">
+        <h2>Admin Login</h2>
+        <form id="login-form">
+            <label for="admin-email">Email:</label>
+            <input type="email" id="admin-email" placeholder="admin@example.com" required>
+            <label for="admin-password">Password:</label>
+            <input type="password" id="admin-password" placeholder="Enter your password" required>
+            <button type="submit" class="btn">Login</button>
+        </form>
+    </div>
+
+    <!-- Admin Dashboard (Visible After Login) -->
+    <div id="admin-dashboard" class="admin-container" style="display:none;">
+        <div class="sidebar">
+            <ul>
+                <li><a href="javascript:void(0)" onclick="showSection('dashboard')">Dashboard</a></li>
+                <li><a href="javascript:void(0)" onclick="showSection('manage-products')">Manage Products</a></li>
+                <li><a href="javascript:void(0)" onclick="logout()">Logout</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <!-- Dashboard Content -->
+            <div id="dashboard" class="section">
+                <h2>Welcome to Admin Dashboard</h2>
+                <div class="dashboard-stats">
+                    <div class="stat">
+                        <h3>Total Products</h3>
+                        <p>200</p>
+                    </div>
+                    <div class="stat">
+                        <h3>Total Orders</h3>
+                        <p>150</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Manage Products Section -->
+            <div id="manage-products" class="section" style="display:none;">
+                <h2>Manage Products</h2>
+                <div class="product-form">
+                    <h3>Add New Product</h3>
+                    <form>
+                        <label for="product-name">Product Name:</label>
+                        <input type="text" id="product-name" required>
+                        <label for="product-price">Product Price:</label>
+                        <input type="number" id="product-price" required>
+                        <label for="product-description">Product Description:</label>
+                        <textarea id="product-description" required></textarea>
+                        <button type="submit" class="btn">Add Product</button>
+                    </form>
+                </div>
+
+                <div class="product-list">
+                    <h3>Existing Products</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Price</th>
+                                <th>Description</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Lehenga</td>
+                                <td>$220</td>
+                                <td>A wedding lehenga with flaza</td>
+                                <td><button class="btn">Edit</button> <button class="btn delete">Delete</button></td>
+                            </tr>
+                            <!-- Add more product rows dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Show the admin dashboard after successful login
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let email = document.getElementById("admin-email").value;
+            let password = document.getElementById("admin-password").value;
+
+            // Simple login check (for demo purposes)
+            if (email === "admin@example.com" && password === "admin123") {
+                document.getElementById("admin-login").style.display = "none";
+                document.getElementById("admin-dashboard").style.display = "flex";
+            } else {
+                alert("Invalid credentials!");
+            }
+        });
+
+        // Logout functionality
+        function logout() {
+            document.getElementById("admin-dashboard").style.display = "none";
+            document.getElementById("admin-login").style.display = "block";
+        }
+
+        // Switch between different sections
+        function showSection(section) {
+            const sections = document.querySelectorAll(".section");
+            sections.forEach(function(sec) {
+                sec.style.display = "none";
+            });
+            document.getElementById(section).style.display = "block";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velvet Vogue - Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">Velvet Vogue</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Shop</a></li>
+                <li><a href="product-details.html">Categorize</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+                <li><a href="accounts.html">Account</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Exclusive Fashion Collections</h1>
+        <p>Discover stylish and trendy outfits at the best prices.</p>
+    </section>
+
+    <!-- Category Buttons -->
+    <section class="category-buttons">
+        <button onclick="filterCategory('men')">Men</button>
+        <button onclick="filterCategory('ladies')">Ladies</button>
+        <button onclick="filterCategory('kids')">Kids</button>
+        <button onclick="filterCategory('sale')">Sale</button>
+    </section>
+
+    <!-- Product Grid -->
+    <section class="product-listing">
+        <div class="product-container">
+
+            <!-- Men's Collection -->
+            <h2 class="section-title"> Men's Collection</h2>
+            <div class="product-grid men">
+                <div class="product-card">
+                    <img src="Images/casual t shirt.webp"T-Shirt">
+                    <h3>Casual T-Shirt</h3>
+                    <p>$40 | Size: S, M, L</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="Images/trouser.webp"T-Shirt">
+                    <h3>Casual Trousher</h3>
+                    <p>$40 | Size: 28,29,32,34 </p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="Images/popcorn t shrt.jpg"T-Shirt">
+                    <h3>Popcorn T-Shirt</h3>
+                    <p>$40 | Size: S, M, L, XL</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="Images/jeans.avif"Jeans">
+                    <h3>Denim Jeans</h3>
+                    <p>$60 | Size: 30, 32, 34</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Ladies' Collection -->
+            <h2 class="section-title"> Ladies' Collection</h2>
+            <div class="product-grid ladies">
+                <div class="product-card">
+                    <img src="Images/elegan dress.avif"Dress">
+                    <h3>Elegant Dress</h3>
+                    <p>$120 | Size: S, M, L</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="Images/luxury hand bag.jpg"Handbag">
+                    <h3>Luxury Handbag</h3>
+                    <p>$85 | Colors: Black, Brown</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="Images/lehenga.webp"Dress">
+                    <h3>Lehenga</h3>
+                    <p>$220 | Size: S, M, L</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="Images/Pakistani chudithar.webp"Dress">
+                    <h3>Pakistani Chudithar</h3>
+                    <p>$95 | Size: S, M, L</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+<!-- Kids' Collection -->
+<h2 class="section-title"> Kids' Collection</h2>
+<div class="product-grid kids">
+    <div class="product-card">
+        <img src="Images/kids t shirt.webp"Kids T-Shirt">
+        <h3>Colorful T-Shirt</h3>
+        <p>$25 | Size: 2-10 Yrs</p>
+        <button class="add-to-cart" onclick="addToCart('Colorful T-Shirt', 25)">Add to Cart</button>
+    </div>
+    <div class="product-card">
+        <img src="Images/kids shorts.jpg"Shorts">
+        <h3>Casual Shorts</h3>
+        <p>$30 | Size: 3-12 Yrs</p>
+        <button class="add-to-cart" onclick="addToCart('Casual Shorts', 30)">Add to Cart</button>
+    </div>
+</div>
+
+<!-- Sale Collection -->
+<h2 class="section-title"> Sale Collection</h2>
+<div class="product-grid sale">
+    <div class="product-card">
+        <img src="Images/designer dress.webp"Sale Dress">
+        <h3>Designer Dress</h3>
+        <p><del>$100</del> $75 | Limited Offer</p>
+        <button class="add-to-cart" onclick="addToCart('Designer Dress', 75)">Add to Cart</button>
+    </div>
+    <div class="product-card">
+        <img src="Images/sneaker.webp"Discounted Shoes">
+        <h3>Casual Sneakers</h3>
+        <p><del>$60</del> $40 | Limited Stock</p>
+        <button class="add-to-cart" onclick="addToCart('Casual Sneakers', 40)">Add to Cart</button>
+    </div>
+</div>
